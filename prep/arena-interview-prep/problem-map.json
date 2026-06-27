@@ -1,0 +1,110 @@
+{
+  "source": {
+    "name": "ARENA Slack screenshots, August 2024 thread",
+    "evidenceDir": "prep/arena-interview-prep/evidence/slack-2024-08",
+    "currentArenaCheckDate": "2026-06-26"
+  },
+  "problems": [
+    {
+      "order": 1,
+      "leetcode_id": 2452,
+      "title": "Words Within Two Edits of Dictionary",
+      "slug": "words-within-two-edits-of-dictionary",
+      "difficulty": "Medium",
+      "pattern": "Bounded Hamming distance across equal-length words",
+      "invariant": "A query qualifies if any dictionary word differs in at most two positions.",
+      "drill_target": "Implement the simple O(q*n*l) version first; discuss hash/trie only if time remains.",
+      "local_paths": {
+        "python": "Python/words-within-two-edits-of-dictionary.py",
+        "cpp": "C++/words-within-two-edits-of-dictionary.cpp"
+      },
+      "leetcode_url": "https://leetcode.com/problems/words-within-two-edits-of-dictionary/description/"
+    },
+    {
+      "order": 2,
+      "leetcode_id": 2390,
+      "title": "Removing Stars From a String",
+      "slug": "removing-stars-from-a-string",
+      "difficulty": "Medium",
+      "pattern": "Stack simulation",
+      "invariant": "Each star deletes the closest live character to its left, exactly like popping a stack.",
+      "drill_target": "Write the stack solution without overthinking string deletion.",
+      "local_paths": {
+        "python": "Python/removing-stars-from-a-string.py",
+        "cpp": "C++/removing-stars-from-a-string.cpp"
+      },
+      "leetcode_url": "https://leetcode.com/problems/removing-stars-from-a-string/description/"
+    },
+    {
+      "order": 3,
+      "leetcode_id": 1753,
+      "title": "Maximum Score From Removing Stones",
+      "slug": "maximum-score-from-removing-stones",
+      "difficulty": "Medium",
+      "pattern": "Greedy/math pile pairing",
+      "invariant": "The score cannot exceed half the total moves or the total outside the largest pile.",
+      "drill_target": "Derive and implement min(total // 2, total - max_pile).",
+      "local_paths": {
+        "python": "Python/maximum-score-from-removing-stones.py",
+        "cpp": "C++/maximum-score-from-removing-stones.cpp"
+      },
+      "leetcode_url": "https://leetcode.com/problems/maximum-score-from-removing-stones/description/"
+    },
+    {
+      "order": 4,
+      "leetcode_id": 1664,
+      "title": "Ways to Make a Fair Array",
+      "slug": "ways-to-make-a-fair-array",
+      "difficulty": "Medium",
+      "pattern": "Prefix/suffix parity sums",
+      "invariant": "After deleting index i, the suffix swaps parity while the prefix keeps parity.",
+      "drill_target": "Track prefix even/odd and suffix even/odd in one pass.",
+      "local_paths": {
+        "python": "Python/ways-to-make-a-fair-array.py",
+        "cpp": "C++/ways-to-make-a-fair-array.cpp"
+      },
+      "leetcode_url": "https://leetcode.com/problems/ways-to-make-a-fair-array/description/"
+    },
+    {
+      "order": 5,
+      "leetcode_id": 1927,
+      "title": "Sum Game",
+      "slug": "sum-game",
+      "difficulty": "Medium",
+      "pattern": "Game theory on digit-sum imbalance and question-mark counts",
+      "invariant": "Bob can force equality only when the remaining question marks can exactly offset the current half-sum difference.",
+      "drill_target": "Memorize the compact condition, then explain why odd question-mark imbalance favors Alice.",
+      "local_paths": {
+        "python": "Python/sum-game.py",
+        "cpp": "C++/sum-game.cpp"
+      },
+      "leetcode_url": "https://leetcode.com/problems/sum-game/description/"
+    },
+    {
+      "order": 6,
+      "leetcode_id": 1671,
+      "title": "Minimum Number of Removals to Make Mountain Array",
+      "slug": "minimum-number-of-removals-to-make-mountain-array",
+      "difficulty": "Hard",
+      "pattern": "Longest increasing subsequence from both sides",
+      "invariant": "A valid peak needs a nonempty increasing arm on the left and decreasing arm on the right.",
+      "drill_target": "Compute LIS lengths left-to-right and right-to-left, then subtract the best mountain length from n.",
+      "local_paths": {
+        "python": "Python/minimum-number-of-removals-to-make-mountain-array.py",
+        "cpp": "C++/minimum-number-of-removals-to-make-mountain-array.cpp"
+      },
+      "leetcode_url": "https://leetcode.com/problems/minimum-number-of-removals-to-make-mountain-array/"
+    }
+  ],
+  "adjacent_problem": {
+    "leetcode_id": 845,
+    "title": "Longest Mountain in Array",
+    "slug": "longest-mountain-in-array",
+    "note": "Appeared in the Slack link message, but the screenshot statement corresponds to LeetCode 1671.",
+    "local_paths": {
+      "python": "Python/longest-mountain-in-array.py",
+      "cpp": "C++/longest-mountain-in-array.cpp"
+    },
+    "leetcode_url": "https://leetcode.com/problems/longest-mountain-in-array/"
+  }
+}

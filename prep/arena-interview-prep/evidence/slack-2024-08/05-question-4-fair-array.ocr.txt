@@ -1,0 +1,35 @@
+Question 4:
+You're working with a list of whole numbers called nuns . Your task is to find out how many ways you can make the list
+balanced" by removing just one number from it.
+We consider the list balanced when the sum of all numbers in odd positions equals the sum of all numbers in even
+positions. Remember, the first position is considered position 0 (even), the second is position 1 (odd), and so on
+Once you remove a number, the remaining numbers in the list might shift positions. For instance, if you have nums=
+17,4,2,4,9]):
+© Taking out the second number (index 1) gives you nuns = [7,2,4,9]
+© Taking out the third number (index 2) gives you nuns = [7,4,4,9] .
+© Taking out the last number (index 4) gives you nuns = [7,4,2,4]
+Your goal is to write a function which takes in nuns , and returns the number of different elements you could remove to
+make the list balanced. In other words, count the number of positions where, if you removed the number in that position,
+the resulting list would be balanced
+Constraints:
+© (1<e nums.length <= 106
+(1c nums[i] <= 104
+Make sure your method is efficient.
+Example 1:
+Input: nums = [7,4,2,4,9]
+Output: 1
+Explanation:
+Remove index 0: [4,2,4,9] -> Not fair.
+Remove index 1: [7,2,4,9] -> Fair.
+Remove index 2: [7,4,4,9] -> Not fair.
+Remove index 3: [7,4,2,9] -> Not fair.
+Remove index 4: [7,4,2,4] -> Not fair.
+Example 2:
+Input: ‘nums=[2,2,2,2,2]
+Output: 5
+Explanation:
+You can remove any index and the remaining array will be fair.
+def waysToMakeFair(nums: list[int]) -> int:
+#Your code here
+return total
+(edited)

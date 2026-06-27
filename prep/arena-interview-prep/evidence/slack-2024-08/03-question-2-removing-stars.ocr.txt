@@ -1,0 +1,31 @@
+12:19 Question 2:
+There is a function that processes a string s of text which contains stars represented by *.
+The function performs the following steps repeatedly:
+© Identifies a\* ins.
+© Find the closest non- * character to its left.
+Remove both this character and the * from s.
+The function is applied in this way until no * characters remain in the string.
+Given a string s return the final string after all these operations have been completed.
+Note:
+© You will always be able to arrive at a final string containing no * characters.
+© The resulting string will always be unique.
+Constraints:
+@ (Lees. length<=1045).
+© 5 consists of lowercase English letters and stars * .
+© The operation above can be performed on s.
+© Make sure your method is efficient.
+Example 4:
+Input: |s = "code**rpa*d”
+Output: |"corpa”
+Explanation: Performing removals from left to right:
+The closest character to the 1st star is "e" in "code**rpa*d". s becomes “cod*rpa*d" .
+The closest character to the 2nd star is "d" in "cod*rpata” . s becomes "corpa*d”
+The closest character to the 3rd staris “a” in “corpa*d". s becomes "corpd" .
+There are no more stars, so we return “corpd” .
+Example 2:
+Input: |s = "removes**##*"
+Output: ""
+Explanation: Every character gets removed, so we return an empty string.
+def remove_stars(s : str) -> str:
+# Your code goes here
+return "foo"

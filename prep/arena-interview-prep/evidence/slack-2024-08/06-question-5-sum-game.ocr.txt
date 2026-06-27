@@ -1,0 +1,43 @@
+Question 5:
+‘Two players (A and B) engage in a turn-based game, with Player A initiating.
+You're provided an even-length string nun containing digits 0,1,2,...,9 and ? symbols. Each turn, if at least one ?
+character remains in num, the active player must:
+© Selecta position i where nunfil is ?
+© Substitute nunfi] with any numeral from 0 to 9.
+The game concludes when nun no longer contains any ? symbols.
+Once the game is concluded, the result is determined as follows:
+© Player B wins if: The digit sum of the first half of nun equals that of its second half.
+© Player A wins if: The digit sum of num first half is not equal to the digit sum of its second half.
+For example, if the final num is "231501" , Player B wins (2+3+1-5+0+1). IFit were "231502" , Player A wins ( 2+3+1!=5+042).
+Assuming optimal play, write a function which takes in num and returns True if player Awill win and False if player B will
+win.
+Constraints:
+© (Zccnum.length <= 1045
+© num. Length is even
+© num consists of only digits and 7".
+Example 1:
+Input: (num = "5023" |.
+Output: False.
+Explanation:
+No moves can be made here.
+540 = 243 So player B wins. So we output False.
+Example 2:
+Input: (num = "2577" |.
+Output: True.
+Explanation:
+Player A can replaces one '?' with "9".
+There is no move that player B can take to make the sums equal.
+Example 3:
+Input: num = "73295777".
+Output: False.
+Explanation:
+Player B will always win. One possible optimal play of the game goes as follows:
+Player A replaces the first '?' with '9",, so that num = "93295772"
+Player B replaces one of the '?' in the right half with ‘9° , so that nun = "93295972" .
+Player A replaces one of the '?' in the right half with '2' , so that num = "93295922" .
+Player B replaces the final '?' in the right half with '7" , so that nun="93295927"
+Player B wins since 9+3+2+9-23-5+9+2+7 .
+Since Player B will win no matter what, we output False .
+def GameResult(num : str) -> bool:
+#Your code goes here
+return True

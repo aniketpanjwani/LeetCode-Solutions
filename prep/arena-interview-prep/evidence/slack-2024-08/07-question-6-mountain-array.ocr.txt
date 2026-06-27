@@ -1,0 +1,29 @@
+Question 6:
+We say that an array arr isa rise-and-fall array if and only if:
+© arr. length>=3 |
+© There exists some i with O<i<arr.length-1 such that:
+© (arr[@] < arr[1] < ... < arr[i-1] < arr{i}
+© (arr[i] > arr[i+i] > ... > arrfarr.Length-1]
+Given a list of integers nuns , return the minimum number of elements that can be removed to make nuns |a rise-and-fall
+array.
+Constraints:
+© (3 <= nums.length <= 1000
+© (1 < mms[i} <= 1049 '
+© Itis guaranteed that you can make nuns into a rise-and-fall array.
+Example 1:
+Input: [nuns = [2,1,1,5,6,2,3,1]
+Output: 3
+Explanation: One solution is to remove the elements at indices 1,2, and 6, making the array nums=[2,5,6,2,1] .
+Example 2:
+Input: nuns = [2,4,6,3,3] |
+Output: 1
+Explanation: We can make the array into a rise-and-fall array by removing the elements at index 3 or 4, either choice
+turns the array into nums=[2,4,6,3] -
+Example 3:
+Input: nuns = [2,6,2]
+Output: 0
+Explanation: [2,6,1] is already a rise-and-fall array.
+def minimunRiseFal1Renovals(nums : list[int]) -> int:
+#Your code here
+return @
+(edited)

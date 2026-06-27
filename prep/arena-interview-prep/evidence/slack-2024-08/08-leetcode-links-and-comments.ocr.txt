@@ -1,0 +1,24 @@
+¥ Akshay Aurora Aug 23d, 2024 at 1:26 PM
+ https://leetcode.com/problems/sum-game/description/
+https://leetcode.com/problems/longest-mountain-in-array/
+https://leetcode.com/problems/ways-to-make-a-fair-array/description/
+https://leetcode.com/problems/maximum-score-from-removing-stones/description/
+https://leetcode.com/problems/removing-stars-from-a-string/description/
+https://leetcode.com/problems/words-within-two-edits-of-dictionary/description/
+as
+iM) Marat Subkhankulov sep 2nd, 2024 at 11:02 AM
+6 mediums in 1 hour
+bs) Sheikh Abdur Raheem Ali sep 14th, 2024 at 1209 AM
+y" using ol-preview to answer the coding questions:
+question 1: thought for a few seconds
+question 2: thought for 17 seconds
+question 3: thought for 26 seconds
+question 4: thought for 30 seconds
+question 5: thought for 95 seconds
+question 6: thought for 29 seconds
+Overall, 197 seconds, less than 5 minutes even if you count time spent time copying and pasting.
+bs) Sheikh Abdur Raheem Ali sep 14th, 2024 at 12:31 AM
+* unclear if it can also do the exercises if prompted with chapter material
+B) Viktoria Malyasova Sep 23rd, 2024 at 5:41 PM
+The 6th problem is actually a hard: https://leetcode.com/problems/minimum-number-of-removals-to-make-mountain-array/
+a6
