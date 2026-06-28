@@ -27,7 +27,7 @@ Update this block at the end of every study sitting.
 | Date | Problem (LC#) | Unit / outcome | Assistance | Pattern family | What was missed / slow | Recall cue | Shaky? | Last reviewed |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 2026-06-26 | Sum Game (LC1927) | Initial miss logged | n/a | Game Theory: Digit-Sum Imbalance | Forgot the odd-question-mark imbalance condition. | Who can offset the half-sum difference? | yes | not yet |
-| 2026-06-28 | Sum Game (LC1927) | LeetCode attempt marked after guided solve | reveal/guided formula | Game Theory: Digit-Sum Imbalance | Needed help with opposite-half vs same-half pairing, exact-cancel condition, and sign of `qdiff`. | Bob wins only on exact signed offset; Alice wins otherwise. | yes | 2026-06-28 |
+| 2026-06-28 | Sum Game (LC1927) | LeetCode attempt marked after guided solve | reveal/guided formula | Game Theory: Digit-Sum Imbalance | Needed help with opposite-half vs same-half pairing, exact-cancel condition, and sign of `qdiff`. | Bob wins only on exact signed offset; Alice wins otherwise. | yes | not yet |
 
 ## How REVIEW Pulls From This Log
 
