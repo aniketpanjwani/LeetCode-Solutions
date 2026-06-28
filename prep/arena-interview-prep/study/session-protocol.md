@@ -22,6 +22,33 @@ A unit is one coherent action:
 
 A sitting can contain any number of units. Stop when your attention, schedule, or energy says to stop. The only required closing move is to update the log so the next restart is clear.
 
+## Practice Surface
+
+Use LeetCode as the active surface for each problem:
+
+1. Open the problem page in Browser.
+2. Read the statement and examples there.
+3. Attempt the solution in the LeetCode editor or a scratch file.
+4. Run or submit on LeetCode if useful.
+5. Compare with the local repo solution only after an attempt or an explicit reveal.
+6. Update [review-log.md](review-log.md).
+
+The repo decides what to work on next; LeetCode is where the attempt happens.
+
+## Hint Levels
+
+When asking Codex for help mid-problem, use the smallest hint that might unblock you:
+
+| Ask for | What Codex should give |
+| --- | --- |
+| `nudge` | A short question or recall cue, no formula. |
+| `pattern hint` | The relevant pattern family and invariant direction. |
+| `example` | A small test case or counterexample to reason through. |
+| `pseudocode` | A scaffold without the final key line if possible. |
+| `reveal` | Full explanation or code, best used after an attempt. |
+
+Record the highest help level used in [review-log.md](review-log.md). If a solve needed `pseudocode` or `reveal`, keep it marked shaky until you can re-drill it from blank.
+
 ## Rotation Rule
 
 Use this priority order:
@@ -83,6 +110,7 @@ Every sitting ends in [review-log.md](review-log.md). Record:
 - the problem or pattern touched,
 - what was missed or slow,
 - the recall cue,
+- the highest help level used,
 - whether it is still shaky,
 - the latest review date.
 

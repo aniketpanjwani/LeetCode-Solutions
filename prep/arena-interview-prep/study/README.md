@@ -8,6 +8,8 @@ This folder is the active, doc-driven prep system for ARENA coding-test practice
 
 There is no predefined daily amount. Some sittings may be one quick re-drill; others may cover several problems. The important invariant is that each sitting ends with enough state in [review-log.md](review-log.md) for the next restart to be obvious.
 
+Use LeetCode as the standard practice surface for problem statements, examples, editor attempts, and submission feedback. Use this repo as the source of truth for what to study next and what to remember between sittings.
+
 ## What's Here
 
 | File | Purpose |
@@ -16,6 +18,10 @@ There is no predefined daily amount. Some sittings may be one quick re-drill; ot
 | [pattern-catalog.md](pattern-catalog.md) | The pattern families, cues, anchors, and reactive-growth rule. |
 | [review-log.md](review-log.md) | The resume pointer plus append-only table for misses, recall cues, shaky flags, and review touches. |
 | [starter-sequence.md](starter-sequence.md) | A fixed starter sequence of study units before switching fully to the protocol. |
+
+## Agent Help
+
+Repo-level agent guidance lives in [../../../AGENTS.md](../../../AGENTS.md). For ARENA prep, Codex should use minimal hints by default: nudge first, reveal only after an attempt or an explicit request.
 
 ## Read-Only Evidence
 
