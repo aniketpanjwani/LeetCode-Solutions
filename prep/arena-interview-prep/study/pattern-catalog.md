@@ -1,8 +1,10 @@
 # Pattern Catalog
 
-This catalog starts with eight families: six directly touched by the ARENA seed problems, plus two adjacent fundamentals. Add new families only when a study unit exposes a real gap.
+This catalog is centered on six ARENA seed families, two adjacent fundamentals, and two general staples seeded by the foundation bridge. Add new families only when a study unit exposes a real gap.
 
 Each anchor uses the metadata in [problem-map.json](../problem-map.json). Local solution links are for review after an attempt, not for first-pass reading.
+
+Use [foundation-roadmap.md](foundation-roadmap.md) for the active Easy bridge and [candidate-pool.json](candidate-pool.json) for provenance, scope tags, and later filtering.
 
 ## Stack Simulation
 
@@ -14,6 +16,7 @@ Each anchor uses the metadata in [problem-map.json](../problem-map.json). Local 
 
 | Problem | Role | Drill focus | Local solution | Evidence |
 | --- | --- | --- | --- | --- |
+| LC20 Valid Parentheses | Foundational rung | Treat each opening bracket as unfinished work; a closing bracket must match the latest unfinished opener. | [Python](../../../Python/valid-parentheses.py) | [bridge](foundation-roadmap.md) |
 | LC2390 Removing Stars From a String | ARENA anchor | Write the stack solution without overthinking string deletion. | [Python](../../../Python/removing-stars-from-a-string.py) | [screenshot](../evidence/slack-2024-08/03-question-2-removing-stars.png) |
 
 ## Greedy / Math Pile Pairing
@@ -38,6 +41,7 @@ Each anchor uses the metadata in [problem-map.json](../problem-map.json). Local 
 
 | Problem | Role | Drill focus | Local solution | Evidence |
 | --- | --- | --- | --- | --- |
+| LC303 Range Sum Query Immutable | Foundational rung | Precompute running totals so each range query is one subtraction. | [Python](../../../Python/range-sum-query-immutable.py) | [bridge](foundation-roadmap.md) |
 | LC1664 Ways to Make a Fair Array | ARENA anchor | Track prefix even/odd and suffix even/odd in one pass. | [Python](../../../Python/ways-to-make-a-fair-array.py) | [screenshot](../evidence/slack-2024-08/05-question-4-fair-array.png) |
 
 ## Bounded Hamming Distance
@@ -89,6 +93,10 @@ Each anchor uses the metadata in [problem-map.json](../problem-map.json). Local 
 
 | Problem | Role | Drill focus | Local solution | Evidence |
 | --- | --- | --- | --- | --- |
+| LC125 Valid Palindrome | Foundational rung | Move inward from both ends, skipping characters that cannot affect symmetry. | [Python](../../../Python/valid-palindrome.py) | [bridge](foundation-roadmap.md) |
+| LC977 Squares of a Sorted Array | Foundational rung | The largest square is at one of the sorted array's ends; fill the output from the back. | [Python](../../../Python/squares-of-a-sorted-array.py) | [bridge](foundation-roadmap.md) |
+| LC121 Best Time to Buy and Sell Stock | Foundational rung | Track the cheapest price so far and ask what profit selling today would give. | [Python](../../../Python/best-time-to-buy-and-sell-stock.py) | [bridge](foundation-roadmap.md) |
+| LC643 Maximum Average Subarray I | Foundational rung | Maintain a fixed-size window sum; slide by adding the new item and dropping the old one. | [Python](../../../Python/maximum-average-subarray-i.py) | [bridge](foundation-roadmap.md) |
 | LC845 Longest Mountain in Array | Foundational adjacent | Scan rising and falling runs without confusing contiguous mountains with subsequence mountains. | [Python](../../../Python/longest-mountain-in-array.py) | [Slack link screenshot](../evidence/slack-2024-08/08-leetcode-links-and-comments.png) |
 
 ## Hashing
@@ -101,8 +109,33 @@ Each anchor uses the metadata in [problem-map.json](../problem-map.json). Local 
 
 | Problem | Role | Drill focus | Local solution | Evidence |
 | --- | --- | --- | --- | --- |
-| LC1 Two Sum | Foundational adjacent | Store complements or seen values so each element is processed once. | [Python](../../../Python/two-sum.py) | general repo anchor |
+| LC1 Two Sum | Foundational rung | Ask what number would complete the target, then make that complement searchable. | [Python](../../../Python/two-sum.py) | [bridge](foundation-roadmap.md) |
+| LC242 Valid Anagram | Foundational rung | Reduce both strings to the same frequency signature before comparing. | [Python](../../../Python/valid-anagram.py) | [bridge](foundation-roadmap.md) |
 | LC2452 Words Within Two Edits of Dictionary | ARENA anchor, optional optimization | Recognize why the simple mismatch count is enough first, then how masked/hash variants could reduce repeated comparison. | [Python](../../../Python/words-within-two-edits-of-dictionary.py) | [screenshot](../evidence/slack-2024-08/02-question-1-two-edit-words.png) |
+
+## Binary Search
+
+**Core idea:** Maintain a sorted search interval and repeatedly discard the half that cannot contain the target.
+
+**Cue / invariant:** Every update must preserve the promise that the answer, if it exists, is still inside the interval.
+
+**Representative problems:**
+
+| Problem | Role | Drill focus | Local solution | Evidence |
+| --- | --- | --- | --- | --- |
+| LC704 Binary Search | Foundational staple | Keep a sorted search interval and discard the half that cannot contain the target. | [Python](../../../Python/binary-search.py) | [bridge](foundation-roadmap.md) |
+
+## BFS / DFS
+
+**Core idea:** Traverse connected structure by asking each node or state what neighbors or children still need work.
+
+**Cue / invariant:** DFS is natural when a node can summarize its subtree; BFS is natural when distance by levels matters.
+
+**Representative problems:**
+
+| Problem | Role | Drill focus | Local solution | Evidence |
+| --- | --- | --- | --- | --- |
+| LC104 Maximum Depth of Binary Tree | Foundational staple | Ask each subtree for its depth; the current depth is one plus the deeper child. | [Python](../../../Python/maximum-depth-of-binary-tree.py) | [bridge](foundation-roadmap.md) |
 
 ## Growing This Catalog Reactively
 
@@ -113,7 +146,4 @@ Add a family or representative problem only after a study unit exposes a concret
 3. Add 1-3 representative problems, not a full curriculum.
 4. Keep the session selector in [session-protocol.md](session-protocol.md) unchanged unless the protocol itself caused the miss.
 
-Named candidates, not seeded yet:
-
-- **Binary search:** add when a study unit shows uncertainty about monotonic predicates or sorted-search variants. Local candidate: [LC704 Binary Search](../../../Python/binary-search.py).
-- **BFS / DFS:** add when a study unit shows graph/tree traversal uncertainty. Local candidates: [Binary Tree Level Order Traversal](../../../Python/binary-tree-level-order-traversal.py), [Number of Islands](../../../Python/number-of-islands.py).
+The bridge already seeds Binary Search and BFS / DFS as general staples. Further problems in those families still need the same review-log signal as any other expansion.

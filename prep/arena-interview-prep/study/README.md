@@ -1,6 +1,6 @@
 # ARENA Study System
 
-First time here: start with [starter-sequence.md](starter-sequence.md).
+First time here: start with [foundation-roadmap.md](foundation-roadmap.md), then move to [starter-sequence.md](starter-sequence.md).
 
 Whenever you restart: open [review-log.md](review-log.md), read the **Current State** block, then use [session-protocol.md](session-protocol.md) if the next action is not obvious.
 
@@ -10,14 +10,21 @@ There is no predefined daily amount. Some sittings may be one quick re-drill; ot
 
 Use LeetCode as the standard practice surface for problem statements, examples, editor attempts, and submission feedback. Use this repo as the source of truth for what to study next and what to remember between sittings.
 
+The foundation bridge is a one-time approved expansion. After it, new problems should grow from review-log evidence and the catalog rule rather than from a fixed curriculum.
+
 ## What's Here
 
 | File | Purpose |
 | --- | --- |
+| [foundation-roadmap.md](foundation-roadmap.md) | The Easy-first bridge before ARENA seed benchmarks. |
 | [session-protocol.md](session-protocol.md) | The session selector: learn, re-drill, review, then repeat if you want to keep going. |
 | [pattern-catalog.md](pattern-catalog.md) | The pattern families, cues, anchors, and reactive-growth rule. |
 | [review-log.md](review-log.md) | The resume pointer plus append-only table for misses, recall cues, shaky flags, and review touches. |
-| [starter-sequence.md](starter-sequence.md) | A fixed starter sequence of study units before switching fully to the protocol. |
+| [starter-sequence.md](starter-sequence.md) | The seed benchmark sequence to use after the foundation bridge. |
+| [candidate-pool.json](candidate-pool.json) | The compact pattern-to-problem pool with scope tags, provenance, and company-frequency facts. |
+| [source-capsule-template.md](source-capsule-template.md) | Empty schema for user-supplied outside advice, kept as weak evidence. |
+
+`candidate-pool.json` credits Sean Prashad's `leetcode-patterns` for curation inspiration and factual fields only; cues and strategy are repo-authored.
 
 ## Agent Help
 
