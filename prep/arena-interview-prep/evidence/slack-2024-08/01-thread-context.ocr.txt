@@ -1,0 +1,19 @@
+‘& Pinned by Carl Vifias
+= James Hindmarch Aus 23rd, 2024 at 12:16 PM
+“8% Thread for coding questions we used (@Adam Watney). Can't link to the IDE so just gonna
+dump them all in a thread here.
+Could also be useful for people wanting to apply to ARENA in future to see the style of
+questions we ask, or just practice leetcode for careers stuff anyway. | think you could
+probably gain sufficient coding skills to answer these questions to the degree that we'd
+require by just working through the ARENA material online (and also actually learn useful
+skills for technical Al safety along the way), so wouldn't encourage anyone to overoptimize
+on this benchmark.
+Also, you should not be put off by how difficult it may look, as | said in the email to
+candidates:
+We expect that the overwhelming majority of candidates will not be able to answer all 6
+questions perfectly, and this test will not be the only way we judge candidates
+This is not just "boilerplate language," almost no-one managed to solve all 6 perfectly, and we
+really did accept candidates with a very wide range of results.
+If anyone wants solutions or wants to check their solutions then happy to be DM'd about it
+(maybe don't put too many spoilers in this thread): (edited)
+3 2 26

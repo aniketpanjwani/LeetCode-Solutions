@@ -1,0 +1,32 @@
+- James Hindmarch Aus 23rd, 2024 at 12:18 PM
+“OFS Question 1:
+You have two collections of lowercase English words: queries and dictionary . All words in both collections have identical
+length.
+You may modify words in queries by changing individual letters. You can only do up to two such modifications per word.
+The goal is to identify which words from queries can be transformed to match any word in dictionary within these
+constraints.
+Create a list containing all the words from queries’ that can be successfully matched with a word from dictionary using no
+more than two letter changes. The resulting list should maintain the original order of words as they appear in queries .
+Constraints:
+@ 1<= queries.length, dictionary. length <= 100
+(n= queries[iJ.length == dictionary[ 3]. length
+o 1en< 100
+© All queries(i] and dictionary[j] are composed of lowercase English letters.
+Example 1:
+Input: queries = ["plate","croak","coats", "float", "crane"], dictionary = ["spoke", “wrote”, "crate",
+“plate"]
+Output : ["plate”, "coats", "crane"]
+Explanation:
+"plate" can remain unchanged and match the dictionary word.
+Changing the |'o' to ‘r'|andthe ‘s' to ‘e'|in “coats” changes it to “crate” .
+Changing the ‘n’ to ‘t' in “crane” changes it to “crate”
+"croak" cannot equal a dictionary word in two or fewer edits.
+"Float" cannot equal a dictionary word in two or fewer edits.
+Example 2:
+Input: queries = ["yeah", “nope"], dictionary = ["cool"]
+Output: [)
+Explanation:
+Both "yeah" and “nope” cannot be edited in two or fewer edits to equal "cool".
+def twoEditWords(queries : list[str], dictionary : list[str]) -> list[str]:
+# Your code goes here
+return (]

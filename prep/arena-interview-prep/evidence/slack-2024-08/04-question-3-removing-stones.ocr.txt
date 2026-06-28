@@ -1,0 +1,35 @@
+Question 3:
+Statement:
+You're participating in a card-based challenge involving
+three stacks of cards. The stacks contain a, b, and c cards respectively.
+In each round, you must select two different non-empty stacks and remove one card from each of the chosen stacks, which
+increases your point total by 1. The challenge concludes when at least two stacks have no remaining cards, making further |
+moves impossible.
+Your task is to create a function that accepts three integer inputs a, b , and c, representing the initial number of cards in
+each stack, and returns the highest possible point total achievable in this challenge.
+Constraints:
+@ a, b,c = 100
+Make sure your method is efficient.
+Example 4:
+Input: a=1, b=4, 5 |
+Output: 5
+Explanation:
+We start with (1,4,5).
+Take a card from the 4st and 3rd piles. The piles are now (0,4,4), and the score is 1.
+Take a card from the 2nd and 3rd piles. The piles are now (0,3,3) and the score is 2.
+Take a card from the 2nd and 3rd piles. The piles are now (0,2,2) and the score is 3.
+Take a card from the 2nd and 3rd piles. The piles are now (0,1,1) and the score is 4.
+Take a card from the 2nd and 3rd piles. The piles are now (0,0,0) and the score is 5. |
+There are at least two empty piles, so the game ends and we output 5.
+Example 2:
+Input: a=2,b=7, c=8
+Output: 3
+Explanation:
+We start with (2,7,8).
+Take a card from the 4st and 3rd piles. The piles are now (1,7,7), and the score is 1.
+Take from the 2nd and 3rd piles for 7 moves, until the state is (1,0,0), and the score is 8.
+There are at least two empty piles, so the game ends and we output 8.
+def maximumScore(a : int, b : int, c: int) -> int:
+# Your code goes here
+return 0
+(edited)

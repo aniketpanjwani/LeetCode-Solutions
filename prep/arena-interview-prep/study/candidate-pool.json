@@ -1,0 +1,448 @@
+{
+  "version": 1,
+  "purpose": "Repo-owned ARENA-first LeetCode candidate pool for foundation bridge problems, ARENA seed benchmarks, and later role-adaptive filtering.",
+  "attribution": {
+    "name": "Sean Prashad leetcode-patterns",
+    "url": "https://github.com/seanprashad/leetcode-patterns",
+    "license": "CC BY-NC 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-nc/4.0/",
+    "usage": "Used as curation inspiration and for factual fields only: slug, title, difficulty, and company-frequency facts. Hint notes are not copied."
+  },
+  "scopeTags": {
+    "arena-core": "Recovered ARENA seed or adjacent benchmark evidence.",
+    "foundation-bridge": "Easy-first bridge rung before ARENA seed benchmarks.",
+    "general-interview": "Generally useful interview staple independent of ARENA.",
+    "role-future": "Reserved for future role-specific slices once target roles are clearer."
+  },
+  "patterns": [
+    {
+      "pattern": "Stack",
+      "catalogFamily": "Stack Simulation",
+      "entries": [
+        {
+          "leetcodeId": 20,
+          "title": "Valid Parentheses",
+          "slug": "valid-parentheses",
+          "difficulty": "Easy",
+          "scope": ["foundation-bridge", "general-interview"],
+          "localPath": "Python/valid-parentheses.py",
+          "leetcodeUrl": "https://leetcode.com/problems/valid-parentheses/description/",
+          "source": {
+            "kind": "sean-prashad-factual",
+            "path": "https://github.com/seanprashad/leetcode-patterns/blob/main/src/data/questions.json",
+            "sourceUpdated": "2026-06-28T13:35:36.978839"
+          },
+          "companyFrequency": {
+            "topCompanies": [
+              {"name": "Google", "slug": "google", "frequency": 15},
+              {"name": "Meta", "slug": "facebook", "frequency": 13},
+              {"name": "LinkedIn", "slug": "linkedin", "frequency": 10},
+              {"name": "Amazon", "slug": "amazon", "frequency": 9},
+              {"name": "Microsoft", "slug": "microsoft", "frequency": 5}
+            ]
+          },
+          "laddersTo": [2390],
+          "cue": "Treat each opening bracket as unfinished work; a closing bracket must match the latest unfinished opener."
+        },
+        {
+          "leetcodeId": 2390,
+          "title": "Removing Stars From a String",
+          "slug": "removing-stars-from-a-string",
+          "difficulty": "Medium",
+          "scope": ["arena-core"],
+          "localPath": "Python/removing-stars-from-a-string.py",
+          "leetcodeUrl": "https://leetcode.com/problems/removing-stars-from-a-string/description/",
+          "source": {
+            "kind": "arena-evidence",
+            "path": "prep/arena-interview-prep/problem-map.json"
+          },
+          "companyFrequency": null,
+          "companyFrequencyNote": "Valued by recovered ARENA evidence; absent from the Sean Prashad dataset used for company-frequency facts.",
+          "laddersTo": [],
+          "cue": "Each star deletes the closest live character to its left, exactly like popping a stack."
+        }
+      ]
+    },
+    {
+      "pattern": "Arrays and Hashing",
+      "catalogFamily": "Hashing",
+      "entries": [
+        {
+          "leetcodeId": 1,
+          "title": "Two Sum",
+          "slug": "two-sum",
+          "difficulty": "Easy",
+          "scope": ["foundation-bridge", "general-interview"],
+          "localPath": "Python/two-sum.py",
+          "leetcodeUrl": "https://leetcode.com/problems/two-sum/description/",
+          "source": {
+            "kind": "sean-prashad-factual",
+            "path": "https://github.com/seanprashad/leetcode-patterns/blob/main/src/data/questions.json",
+            "sourceUpdated": "2026-06-28T13:35:36.978839"
+          },
+          "companyFrequency": {
+            "topCompanies": [
+              {"name": "Google", "slug": "google", "frequency": 162},
+              {"name": "Amazon", "slug": "amazon", "frequency": 76},
+              {"name": "Meta", "slug": "facebook", "frequency": 33},
+              {"name": "Microsoft", "slug": "microsoft", "frequency": 30},
+              {"name": "Bloomberg", "slug": "bloomberg", "frequency": 23}
+            ]
+          },
+          "laddersTo": [2452],
+          "cue": "Ask what number would complete the target, then make that complement searchable."
+        },
+        {
+          "leetcodeId": 242,
+          "title": "Valid Anagram",
+          "slug": "valid-anagram",
+          "difficulty": "Easy",
+          "scope": ["foundation-bridge", "general-interview"],
+          "localPath": "Python/valid-anagram.py",
+          "leetcodeUrl": "https://leetcode.com/problems/valid-anagram/description/",
+          "source": {
+            "kind": "sean-prashad-factual",
+            "path": "https://github.com/seanprashad/leetcode-patterns/blob/main/src/data/questions.json",
+            "sourceUpdated": "2026-06-28T13:35:36.978839"
+          },
+          "companyFrequency": {
+            "topCompanies": [
+              {"name": "Google", "slug": "google", "frequency": 13},
+              {"name": "Microsoft", "slug": "microsoft", "frequency": 11},
+              {"name": "Amazon", "slug": "amazon", "frequency": 8},
+              {"name": "Meta", "slug": "facebook", "frequency": 5},
+              {"name": "Bloomberg", "slug": "bloomberg", "frequency": 4}
+            ]
+          },
+          "laddersTo": [2452],
+          "cue": "Reduce both strings to the same frequency signature before comparing."
+        },
+        {
+          "leetcodeId": 2452,
+          "title": "Words Within Two Edits of Dictionary",
+          "slug": "words-within-two-edits-of-dictionary",
+          "difficulty": "Medium",
+          "scope": ["arena-core"],
+          "localPath": "Python/words-within-two-edits-of-dictionary.py",
+          "leetcodeUrl": "https://leetcode.com/problems/words-within-two-edits-of-dictionary/description/",
+          "source": {
+            "kind": "arena-evidence",
+            "path": "prep/arena-interview-prep/problem-map.json"
+          },
+          "companyFrequency": null,
+          "companyFrequencyNote": "Valued by recovered ARENA evidence; absent from the Sean Prashad dataset used for company-frequency facts.",
+          "laddersTo": [],
+          "cue": "Count mismatched positions against each candidate word and stop once the two-edit budget is exceeded."
+        }
+      ]
+    },
+    {
+      "pattern": "Two Pointers",
+      "catalogFamily": "Two-Pointer / Sliding Window",
+      "entries": [
+        {
+          "leetcodeId": 125,
+          "title": "Valid Palindrome",
+          "slug": "valid-palindrome",
+          "difficulty": "Easy",
+          "scope": ["foundation-bridge", "general-interview"],
+          "localPath": "Python/valid-palindrome.py",
+          "leetcodeUrl": "https://leetcode.com/problems/valid-palindrome/description/",
+          "source": {
+            "kind": "sean-prashad-factual",
+            "path": "https://github.com/seanprashad/leetcode-patterns/blob/main/src/data/questions.json",
+            "sourceUpdated": "2026-06-28T13:35:36.978839"
+          },
+          "companyFrequency": {
+            "topCompanies": [
+              {"name": "Google", "slug": "google", "frequency": 10},
+              {"name": "Amazon", "slug": "amazon", "frequency": 8},
+              {"name": "Meta", "slug": "facebook", "frequency": 5},
+              {"name": "Bloomberg", "slug": "bloomberg", "frequency": 5},
+              {"name": "Microsoft", "slug": "microsoft", "frequency": 2}
+            ]
+          },
+          "laddersTo": [1671, 845],
+          "cue": "Move inward from both ends, skipping characters that cannot affect symmetry."
+        },
+        {
+          "leetcodeId": 977,
+          "title": "Squares of a Sorted Array",
+          "slug": "squares-of-a-sorted-array",
+          "difficulty": "Easy",
+          "scope": ["foundation-bridge", "general-interview"],
+          "localPath": "Python/squares-of-a-sorted-array.py",
+          "leetcodeUrl": "https://leetcode.com/problems/squares-of-a-sorted-array/description/",
+          "source": {
+            "kind": "sean-prashad-factual",
+            "path": "https://github.com/seanprashad/leetcode-patterns/blob/main/src/data/questions.json",
+            "sourceUpdated": "2026-06-28T13:35:36.978839",
+            "note": "Human-facing LeetCode id is 977; source data reported this slug with an internal id."
+          },
+          "companyFrequency": {
+            "topCompanies": [
+              {"name": "Uber", "slug": "uber", "frequency": 8},
+              {"name": "Amazon", "slug": "amazon", "frequency": 6},
+              {"name": "Google", "slug": "google", "frequency": 5},
+              {"name": "Meta", "slug": "facebook", "frequency": 4},
+              {"name": "tcs", "slug": "tcs", "frequency": 4}
+            ]
+          },
+          "laddersTo": [1671, 845],
+          "cue": "The largest square is at one of the sorted array's ends; fill the output from the back."
+        },
+        {
+          "leetcodeId": 845,
+          "title": "Longest Mountain in Array",
+          "slug": "longest-mountain-in-array",
+          "difficulty": "Medium",
+          "scope": ["arena-core"],
+          "localPath": "Python/longest-mountain-in-array.py",
+          "leetcodeUrl": "https://leetcode.com/problems/longest-mountain-in-array/",
+          "source": {
+            "kind": "arena-evidence-adjacent",
+            "path": "prep/arena-interview-prep/problem-map.json"
+          },
+          "companyFrequency": null,
+          "companyFrequencyNote": "Valued by recovered ARENA-adjacent evidence; absent from the Sean Prashad dataset used for company-frequency facts.",
+          "laddersTo": [],
+          "cue": "Scan contiguous rises and falls without confusing a run-shaped mountain with a subsequence mountain."
+        }
+      ]
+    },
+    {
+      "pattern": "Sliding Window",
+      "catalogFamily": "Two-Pointer / Sliding Window",
+      "entries": [
+        {
+          "leetcodeId": 121,
+          "title": "Best Time to Buy and Sell Stock",
+          "slug": "best-time-to-buy-and-sell-stock",
+          "difficulty": "Easy",
+          "scope": ["foundation-bridge", "general-interview"],
+          "localPath": "Python/best-time-to-buy-and-sell-stock.py",
+          "leetcodeUrl": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/",
+          "source": {
+            "kind": "sean-prashad-factual",
+            "path": "https://github.com/seanprashad/leetcode-patterns/blob/main/src/data/questions.json",
+            "sourceUpdated": "2026-06-28T13:35:36.978839"
+          },
+          "companyFrequency": {
+            "topCompanies": [
+              {"name": "Amazon", "slug": "amazon", "frequency": 34},
+              {"name": "Google", "slug": "google", "frequency": 30},
+              {"name": "Bloomberg", "slug": "bloomberg", "frequency": 10},
+              {"name": "Meta", "slug": "facebook", "frequency": 9},
+              {"name": "Microsoft", "slug": "microsoft", "frequency": 8}
+            ]
+          },
+          "laddersTo": [1664],
+          "cue": "Track the cheapest price so far and ask what profit selling today would give."
+        },
+        {
+          "leetcodeId": 643,
+          "title": "Maximum Average Subarray I",
+          "slug": "maximum-average-subarray-i",
+          "difficulty": "Easy",
+          "scope": ["foundation-bridge", "general-interview"],
+          "localPath": "Python/maximum-average-subarray-i.py",
+          "leetcodeUrl": "https://leetcode.com/problems/maximum-average-subarray-i/description/",
+          "source": {
+            "kind": "sean-prashad-factual",
+            "path": "https://github.com/seanprashad/leetcode-patterns/blob/main/src/data/questions.json",
+            "sourceUpdated": "2026-06-28T13:35:36.978839"
+          },
+          "companyFrequency": {
+            "topCompanies": [
+              {"name": "Google", "slug": "google", "frequency": 5},
+              {"name": "Bloomberg", "slug": "bloomberg", "frequency": 4},
+              {"name": "Amazon", "slug": "amazon", "frequency": 3},
+              {"name": "Meta", "slug": "facebook", "frequency": 2},
+              {"name": "Microsoft", "slug": "microsoft", "frequency": 2}
+            ]
+          },
+          "laddersTo": [1664],
+          "cue": "Maintain a fixed-size window sum; slide by adding the new item and dropping the old one."
+        }
+      ]
+    },
+    {
+      "pattern": "Prefix Sums",
+      "catalogFamily": "Prefix / Suffix Parity",
+      "entries": [
+        {
+          "leetcodeId": 303,
+          "title": "Range Sum Query - Immutable",
+          "slug": "range-sum-query-immutable",
+          "difficulty": "Easy",
+          "scope": ["foundation-bridge", "general-interview"],
+          "localPath": "Python/range-sum-query-immutable.py",
+          "leetcodeUrl": "https://leetcode.com/problems/range-sum-query-immutable/description/",
+          "source": {
+            "kind": "sean-prashad-factual",
+            "path": "https://github.com/seanprashad/leetcode-patterns/blob/main/src/data/questions.json",
+            "sourceUpdated": "2026-06-28T13:35:36.978839"
+          },
+          "companyFrequency": {
+            "topCompanies": [
+              {"name": "Google", "slug": "google", "frequency": 4},
+              {"name": "Amazon", "slug": "amazon", "frequency": 3},
+              {"name": "Microsoft", "slug": "microsoft", "frequency": 2}
+            ]
+          },
+          "laddersTo": [1664],
+          "cue": "Precompute running totals so each range query is one subtraction."
+        },
+        {
+          "leetcodeId": 1664,
+          "title": "Ways to Make a Fair Array",
+          "slug": "ways-to-make-a-fair-array",
+          "difficulty": "Medium",
+          "scope": ["arena-core"],
+          "localPath": "Python/ways-to-make-a-fair-array.py",
+          "leetcodeUrl": "https://leetcode.com/problems/ways-to-make-a-fair-array/description/",
+          "source": {
+            "kind": "arena-evidence",
+            "path": "prep/arena-interview-prep/problem-map.json"
+          },
+          "companyFrequency": null,
+          "companyFrequencyNote": "Valued by recovered ARENA evidence; absent from the Sean Prashad dataset used for company-frequency facts.",
+          "laddersTo": [],
+          "cue": "After deleting an index, prefix parity stays put while suffix parity swaps."
+        }
+      ]
+    },
+    {
+      "pattern": "Binary Search",
+      "catalogFamily": "Binary Search",
+      "entries": [
+        {
+          "leetcodeId": 704,
+          "title": "Binary Search",
+          "slug": "binary-search",
+          "difficulty": "Easy",
+          "scope": ["foundation-bridge", "general-interview"],
+          "localPath": "Python/binary-search.py",
+          "leetcodeUrl": "https://leetcode.com/problems/binary-search/description/",
+          "source": {
+            "kind": "sean-prashad-factual",
+            "path": "https://github.com/seanprashad/leetcode-patterns/blob/main/src/data/questions.json",
+            "sourceUpdated": "2026-06-28T13:35:36.978839",
+            "note": "Human-facing LeetCode id is 704; source data reported this slug with an internal id."
+          },
+          "companyFrequency": {
+            "topCompanies": [
+              {"name": "Google", "slug": "google", "frequency": 6},
+              {"name": "Amazon", "slug": "amazon", "frequency": 4},
+              {"name": "Bloomberg", "slug": "bloomberg", "frequency": 4},
+              {"name": "Microsoft", "slug": "microsoft", "frequency": 2},
+              {"name": "Meta", "slug": "facebook", "frequency": 2}
+            ]
+          },
+          "laddersTo": [],
+          "cue": "Keep a sorted search interval and discard the half that cannot contain the target."
+        }
+      ]
+    },
+    {
+      "pattern": "BFS / DFS",
+      "catalogFamily": "BFS / DFS",
+      "entries": [
+        {
+          "leetcodeId": 104,
+          "title": "Maximum Depth of Binary Tree",
+          "slug": "maximum-depth-of-binary-tree",
+          "difficulty": "Easy",
+          "scope": ["foundation-bridge", "general-interview"],
+          "localPath": "Python/maximum-depth-of-binary-tree.py",
+          "leetcodeUrl": "https://leetcode.com/problems/maximum-depth-of-binary-tree/description/",
+          "source": {
+            "kind": "sean-prashad-factual",
+            "path": "https://github.com/seanprashad/leetcode-patterns/blob/main/src/data/questions.json",
+            "sourceUpdated": "2026-06-28T13:35:36.978839"
+          },
+          "companyFrequency": {
+            "topCompanies": [
+              {"name": "Google", "slug": "google", "frequency": 6},
+              {"name": "Microsoft", "slug": "microsoft", "frequency": 3},
+              {"name": "LinkedIn", "slug": "linkedin", "frequency": 3},
+              {"name": "Meta", "slug": "facebook", "frequency": 2},
+              {"name": "Amazon", "slug": "amazon", "frequency": 2}
+            ]
+          },
+          "laddersTo": [],
+          "cue": "Ask each subtree for its depth; the current depth is one plus the deeper child."
+        }
+      ]
+    },
+    {
+      "pattern": "Greedy / Math",
+      "catalogFamily": "Greedy / Math Pile Pairing",
+      "entries": [
+        {
+          "leetcodeId": 1753,
+          "title": "Maximum Score From Removing Stones",
+          "slug": "maximum-score-from-removing-stones",
+          "difficulty": "Medium",
+          "scope": ["arena-core"],
+          "localPath": "Python/maximum-score-from-removing-stones.py",
+          "leetcodeUrl": "https://leetcode.com/problems/maximum-score-from-removing-stones/description/",
+          "source": {
+            "kind": "arena-evidence",
+            "path": "prep/arena-interview-prep/problem-map.json"
+          },
+          "companyFrequency": null,
+          "companyFrequencyNote": "Valued by recovered ARENA evidence; absent from the Sean Prashad dataset used for company-frequency facts.",
+          "laddersTo": [],
+          "cue": "Bound the score by both half the total stones and the total outside the largest pile."
+        }
+      ]
+    },
+    {
+      "pattern": "Game Theory",
+      "catalogFamily": "Game Theory: Digit-Sum Imbalance",
+      "entries": [
+        {
+          "leetcodeId": 1927,
+          "title": "Sum Game",
+          "slug": "sum-game",
+          "difficulty": "Medium",
+          "scope": ["arena-core"],
+          "localPath": "Python/sum-game.py",
+          "leetcodeUrl": "https://leetcode.com/problems/sum-game/description/",
+          "source": {
+            "kind": "arena-evidence",
+            "path": "prep/arena-interview-prep/problem-map.json"
+          },
+          "companyFrequency": null,
+          "companyFrequencyNote": "Valued by recovered ARENA evidence; absent from the Sean Prashad dataset used for company-frequency facts.",
+          "laddersTo": [],
+          "cue": "Bob wins only when the remaining question marks can exactly offset the signed half-sum difference."
+        }
+      ]
+    },
+    {
+      "pattern": "LIS From Both Sides",
+      "catalogFamily": "LIS From Both Sides",
+      "entries": [
+        {
+          "leetcodeId": 1671,
+          "title": "Minimum Number of Removals to Make Mountain Array",
+          "slug": "minimum-number-of-removals-to-make-mountain-array",
+          "difficulty": "Hard",
+          "scope": ["arena-core"],
+          "localPath": "Python/minimum-number-of-removals-to-make-mountain-array.py",
+          "leetcodeUrl": "https://leetcode.com/problems/minimum-number-of-removals-to-make-mountain-array/",
+          "source": {
+            "kind": "arena-evidence",
+            "path": "prep/arena-interview-prep/problem-map.json"
+          },
+          "companyFrequency": null,
+          "companyFrequencyNote": "Valued by recovered ARENA evidence; absent from the Sean Prashad dataset used for company-frequency facts.",
+          "laddersTo": [],
+          "cue": "A valid peak needs increasing support from the left and decreasing support from the right."
+        }
+      ]
+    }
+  ]
+}
