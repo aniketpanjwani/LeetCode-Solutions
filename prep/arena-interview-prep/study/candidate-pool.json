@@ -30,8 +30,7 @@
           "source": {
             "kind": "sean-prashad-factual",
             "path": "https://github.com/seanprashad/leetcode-patterns/blob/main/src/data/questions.json",
-            "sourceUpdated": "2026-06-28T13:35:36.978839",
-            "note": "Human-facing LeetCode id is 977; source data reported this slug with an internal id."
+            "sourceUpdated": "2026-06-28T13:35:36.978839"
           },
           "companyFrequency": {
             "topCompanies": [
@@ -177,7 +176,8 @@
           "source": {
             "kind": "sean-prashad-factual",
             "path": "https://github.com/seanprashad/leetcode-patterns/blob/main/src/data/questions.json",
-            "sourceUpdated": "2026-06-28T13:35:36.978839"
+            "sourceUpdated": "2026-06-28T13:35:36.978839",
+            "note": "Human-facing LeetCode id is 977; source data reported this slug with an internal id."
           },
           "companyFrequency": {
             "topCompanies": [
@@ -195,7 +195,7 @@
           "leetcodeId": 845,
           "title": "Longest Mountain in Array",
           "slug": "longest-mountain-in-array",
-          "difficulty": "Adjacent reference",
+          "difficulty": "Medium",
           "scope": ["arena-core"],
           "localPath": "Python/longest-mountain-in-array.py",
           "leetcodeUrl": "https://leetcode.com/problems/longest-mountain-in-array/",

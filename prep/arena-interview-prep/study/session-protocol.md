@@ -45,9 +45,9 @@ When asking Codex for help mid-problem, use the smallest hint that might unblock
 | `pattern hint` | The relevant pattern family and invariant direction. |
 | `example` | A small test case or counterexample to reason through. |
 | `pseudocode` | A scaffold without the final key line if possible. |
-| `reveal` | Full explanation or code, best used after an attempt. |
+| `reveal/guided formula` | Full explanation or code, best used after an attempt. |
 
-Record the highest help level used in [review-log.md](review-log.md). If a solve needed `pseudocode` or `reveal`, keep it marked shaky until you can re-drill it from blank.
+Record the highest help level used in [review-log.md](review-log.md). If a solve needed `pseudocode` or `reveal/guided formula`, keep it marked shaky until you can re-drill it from blank.
 
 ## Rotation Rule
 

@@ -11,7 +11,7 @@ origin: docs/brainstorms/2026-06-26-arena-interview-prep-setup-requirements.md
 
 ## Summary
 
-Build a lightweight, in-repo, **doc-driven** ARENA coding-test prep system, organized by *pattern* and sized for ~30 min/day. It centers on a dead-simple daily session protocol that rotates learn / re-drill / review by a flag-priority rule, backed by a small pattern catalog (8 starting families — the 6 the six seed problems directly touch plus two adjacent fundamentals — growing reactively) with the six ARENA problems as anchors, and an append-only plain-text review log that captures misses and recall cues. The plan delivers five markdown files under a new `prep/arena-interview-prep/study/` folder plus a first-week starter sequence and a manual validation checklist. No scripts, no automation, no external integrations. Flashcards, a timed simulator, and a reusable skill are deferred until the daily habit exists and real failure modes are visible.
+Build a lightweight, in-repo, **doc-driven** ARENA coding-test prep system, organized by *pattern* and sized for ~30 min/day. It centers on a dead-simple daily session protocol that rotates learn / re-drill / review by a flag-priority rule, backed by a small pattern catalog (8 starting families — the 6 the six seed problems directly touch plus two adjacent fundamentals — growing reactively) with the six ARENA problems as anchors, and an append-only plain-text review log that captures misses and recall cues. The plan delivers five markdown files under a new `prep/arena-interview-prep/study/` folder plus a starter sequence and a manual validation checklist. No scripts, no automation, no external integrations. Flashcards, a timed simulator, and a reusable skill are deferred until the daily habit exists and real failure modes are visible.
 
 This is a **planning** document. It defines the file layout, the content shape of each doc, decisions, and validation — it does not author the final prose of the docs themselves.
 
@@ -48,7 +48,7 @@ The system is five documents with a defined daily decision flow and outcome data
 
 ```mermaid
 flowchart TD
-    Start([Open daily-protocol.md ~30 min]) --> Carry{Unfinished problem<br/>from last session?}
+    Start([Open session-protocol.md ~30 min]) --> Carry{Unfinished problem<br/>from last session?}
     Carry -- yes --> Redrill[RE-DRILL: finish / re-solve it, timed]
     Carry -- no --> Shaky{Any shaky-flagged item<br/>not reviewed recently?}
     Shaky -- yes --> Review[REVIEW: pull least-recently-reviewed<br/>+ shaky items from log]
@@ -69,12 +69,12 @@ flowchart TD
 
 ```mermaid
 flowchart LR
-    README[README.md<br/>index + read-only policy<br/>+ deferred-features note] -.points to.-> PROTO[daily-protocol.md<br/>keystone selector]
+    README[README.md<br/>index + read-only policy<br/>+ deferred-features note] -.points to.-> PROTO[session-protocol.md<br/>keystone selector]
     README -.points to.-> CAT[pattern-catalog.md<br/>8 families + anchors<br/>reactive-growth rule]
     README -.points to.-> LOG[review-log.md<br/>append-only table<br/>+ promotion signal]
     PROTO -- chooses pattern from --> CAT
     PROTO -- records outcome in --> LOG
-    FW[first-week.md<br/>7-session starter] -- hands off to --> PROTO
+    FW[starter-sequence.md<br/>7-session starter] -- hands off to --> PROTO
     CAT -. read-only refs .-> EV[(evidence/ + problem-map.json<br/>raw, never modified)]
 ```
 
@@ -93,10 +93,10 @@ prep/arena-interview-prep/
 ├── evidence/slack-2024-08/   # EXISTING — raw evidence, not modified
 └── study/                    # NEW — the active doc-driven prep system
     ├── README.md             # index, 30-second how-to-use, read-only policy, deferred-features note
-    ├── daily-protocol.md     # KEYSTONE: 3 day-types, flag-priority rotation, ~30-min sizing
+    ├── session-protocol.md     # KEYSTONE: 3 day-types, flag-priority rotation, ~30-min sizing
     ├── pattern-catalog.md    # 8 starting families (6 seed-touched + 2 foundational); reactive-growth rule + add-candidates
     ├── review-log.md         # append-only markdown table + legend + worked example + promotion signal
-    └── first-week.md         # concrete 7-session starter sequence, hands off to daily-protocol
+    └── starter-sequence.md         # concrete 7-session starter sequence, hands off to session-protocol
 ```
 
 ---
@@ -108,7 +108,7 @@ prep/arena-interview-prep/
 | R1 catalog of ~8–12 families covering the seed patterns | U1 (pattern-catalog) |
 | R2 each family: core idea, cue/invariant, 1–3 reps; six problems as anchors reusing `problem-map.json` | U1 |
 | R3 catalog grows reactively | U1 (reactive-growth rule + add-candidates) |
-| R4 single skimmable protocol answers "what today?" in seconds | U3 (daily-protocol) |
+| R4 single skimmable protocol answers "what today?" in seconds | U3 (session-protocol) |
 | R5 three day-types + rotation rule | U3 |
 | R6 each day-type fits ~30 min; a Medium may span sessions | U3 |
 | R7 protocol names where outcome is recorded | U3 → review-log link |
@@ -153,17 +153,17 @@ prep/arena-interview-prep/
   - A short **Legend** above the table: `Shaky?` = `yes` / `ok`; "Last reviewed" = date of most recent review-day touch; pattern family must match a `pattern-catalog.md` family name (the cross-link that lets recurrence cluster).
   - One **worked example row** seeded from AE3: Sum Game (LC1927), pattern = game theory, miss = "forgot the odd-question-mark imbalance condition," cue = "who can offset the half-sum difference?", Shaky? = yes. This doubles as the format demonstration.
   - A **"Spotting promotion candidates"** subsection (R10, AE4): scan the *What was missed / Pattern family* columns; when the same invariant misses 3+ times across entries, mark it a flashcard-promotion candidate (the deferred `flashcard` skill is the target — link to the deferred-features note in README).
-  - A **"How review day pulls from this log"** subsection (R9): the review day-type selects the least-recently-reviewed rows plus any `Shaky? = yes` rows — explicitly *not* a computed SRS interval. Cross-reference `daily-protocol.md`.
+  - A **"How review day pulls from this log"** subsection (R9): the review day-type selects the least-recently-reviewed rows plus any `Shaky? = yes` rows — explicitly *not* a computed SRS interval. Cross-reference `session-protocol.md`.
 - **Patterns to follow:** plain GitHub-flavored markdown table; keep columns narrow enough to skim.
 - **Test scenarios:** `Test expectation: none -- documentation artifact; validated manually via the Validation Checklist (R8, R9, R10) and the AE3/AE4 walkthroughs.`
 - **Verification:** Table has all 7 columns; legend defines `Shaky?` and "Last reviewed"; AE3 example row present and well-formed; promotion-candidate rule and review-pull rule both stated; pattern-family column values reference catalog family names.
 
-### U3. Daily session protocol (`daily-protocol.md`) — keystone
+### U3. Daily session protocol (`session-protocol.md`) — keystone
 
 - **Goal:** Deliver the single skimmable doc that answers "what do I do in today's ~30 minutes?" in seconds, defining the three day-types, the flag-priority rotation, ~30-min sizing, and where outcomes are recorded.
 - **Requirements:** R4, R5, R6, R7, R9 (selection side); satisfies AE1, AE2; links AE3 logging.
 - **Dependencies:** U1 (references catalog families/anchors), U2 (references the log + review-pull rule).
-- **Files:** create `prep/arena-interview-prep/study/daily-protocol.md`.
+- **Files:** create `prep/arena-interview-prep/study/session-protocol.md`.
 - **Approach:**
   - Open with a **"Do this now" block at the very top** (R4): a 4–6 line decision the user reads in seconds, encoding the rotation rule from the HTD flowchart (carryover → review-if-shaky-and-stale → else alternate learn/re-drill). The decision must require **no per-day planning** from the user.
   - **Three day-type sections**, each sized to ~30 min (R6):
@@ -177,12 +177,12 @@ prep/arena-interview-prep/
 - **Test scenarios:** `Test expectation: none -- documentation artifact; validated manually via the Validation Checklist (R4–R7) and the AE1/AE2 walkthroughs (time the "what do I do?" decision).`
 - **Verification:** Top-of-file decision block resolves a day-type in ≤~1 min with no planning (AE1); all three day-types defined and each plausibly ≤30 min; carryover/AE2 rule present; rotation rule matches the HTD flowchart; review-log link present.
 
-### U4. First-week starter (`first-week.md`)
+### U4. First-week starter (`starter-sequence.md`)
 
 - **Goal:** Provide a concrete, no-decisions 7-session opening sequence that bootstraps the habit, then hands off to the steady-state protocol.
-- **Requirements:** supports R4 (zero-friction start) and the first-week-rollout deliverable; exercises AE1/AE2 on real anchors.
+- **Requirements:** supports R4 (zero-friction start) and the starter-sequence rollout deliverable; exercises AE1/AE2 on real anchors.
 - **Dependencies:** U1 (catalog families/anchors), U3 (day-types + handoff).
-- **Files:** create `prep/arena-interview-prep/study/first-week.md`.
+- **Files:** create `prep/arena-interview-prep/study/starter-sequence.md`.
 - **Approach:**
   - A fixed 7-session table: **Session | Day-type | Pattern / problem | Why now**. Order anchors easy → hard to build confidence:
     1. LEARN — stack simulation, Removing Stars (LC2390) — easiest anchor.
@@ -193,10 +193,10 @@ prep/arena-interview-prep/
     6. LEARN — bounded Hamming distance, Words Within Two Edits (LC2452).
     7. RE-DRILL / catch-up — re-solve a shaky one or finish any carryover.
   - Defer the two hardest anchors (Sum Game game-theory LC1927, Mountain-array LIS Hard LC1671) to week 2+, noted explicitly so the beginner isn't ambushed by the Hard early.
-  - End with a **"After week 1"** handoff line pointing to `daily-protocol.md` as the ongoing driver (first-week.md is one-time). This file prescribes a fixed opening sequence and deliberately does **not** restate the rotation rule, so `daily-protocol.md` stays the single selector and the two cannot drift.
+  - End with a **"After week 1"** handoff line pointing to `session-protocol.md` as the ongoing driver (starter-sequence.md is one-time). This file prescribes a fixed opening sequence and deliberately does **not** restate the rotation rule, so `session-protocol.md` stays the single selector and the two cannot drift.
 - **Patterns to follow:** same compact table style as the catalog.
-- **Test scenarios:** `Test expectation: none -- documentation artifact; validated manually via the Validation Checklist (first-week rollout) and confirming every named problem exists as a catalog anchor.`
-- **Verification:** 7 sessions, each with a concrete day-type + named anchor that exists in the catalog; mix includes ≥1 review and ≥1 re-drill; Hard anchor deferred with a note; handoff to `daily-protocol.md` present.
+- **Test scenarios:** `Test expectation: none -- documentation artifact; validated manually via the Validation Checklist (starter-sequence rollout) and confirming every named problem exists as a catalog anchor.`
+- **Verification:** 7 sessions, each with a concrete day-type + named anchor that exists in the catalog; mix includes ≥1 review and ≥1 re-drill; Hard anchor deferred with a note; handoff to `session-protocol.md` present.
 
 ### U5. Study README / index (`README.md`)
 
@@ -205,7 +205,7 @@ prep/arena-interview-prep/
 - **Dependencies:** U1–U4 (links to all).
 - **Files:** create `prep/arena-interview-prep/study/README.md`.
 - **Approach:**
-  - **"Start here" pointer**: first-time → `first-week.md`; every day after → `daily-protocol.md`. Two lines, top of file.
+  - **"Start here" pointer**: first-time → `starter-sequence.md`; every day after → `session-protocol.md`. Two lines, top of file.
   - **What's in this folder**: one-line description + link for each of the four sibling docs.
   - **Read-only evidence policy** (R12, KTD1): the raw packet (`../README.md`, `../problem-map.json`, `../evidence/`) is source-of-truth and must not be edited or restructured; the study system only references it. Use relative links.
   - **Intentionally deferred (not in v1)** note: Convex flashcard integration (via the `flashcard` skill, promoted from log-proven recurrence), timed full-simulation tooling (last 2–3 weeks before the test), a reusable `ce`-style skill, and a full standard curriculum — each one line, mirroring origin scope boundaries so the over-build risk stays visible.
@@ -220,7 +220,7 @@ prep/arena-interview-prep/
 
 Manual acceptance (no automated tests — these are documents). Run after all units land:
 
-- [ ] **AE1 (learn day):** Open `daily-protocol.md` cold and time it — within ~1 min the user knows it's a learn day and which pattern + anchor to study, deciding nothing themselves.
+- [ ] **AE1 (learn day):** Open `session-protocol.md` cold and time it — within ~1 min the user knows it's a learn day and which pattern + anchor to study, deciding nothing themselves.
 - [ ] **AE2 (carryover):** The protocol explicitly frames an unfinished Medium/Hard at the 30-min mark as tomorrow's re-drill, not a failure (e.g., starting LC1671 and stopping mid-solution).
 - [ ] **AE3 (log + resurface):** Following the `review-log.md` schema, a Sum Game miss (pattern=game theory, cue, Shaky?=yes) can be logged, and the protocol's review pull would surface it because it's flagged shaky.
 - [ ] **AE4 (recurrence visible):** The same invariant missed on 3 entries across the log is visually obvious in one scan and maps to the promotion-candidate rule.
@@ -238,7 +238,7 @@ Manual acceptance (no automated tests — these are documents). Run after all un
 ## Scope Boundaries
 
 ### In scope (v1)
-The five docs under `prep/arena-interview-prep/study/`, the first-week starter, and the validation checklist above.
+The five docs under `prep/arena-interview-prep/study/`, the starter sequence, and the validation checklist above.
 
 ### Deferred for later (build once the habit and failure modes are real) — from origin
 - **Convex flashcard app integration** — promote recurring, log-proven misses into spaced repetition via the `flashcard` skill.
@@ -259,7 +259,7 @@ The five docs under `prep/arena-interview-prep/study/`, the first-week starter, 
 
 - The six Python anchor solutions under `Python/` exist (verified) and `problem-map.json` fields are reusable as catalog seed (verified).
 - The `flashcard` skill / Convex app remain available as the future spaced-repetition target (per origin; not exercised in v1).
-- **Assumption:** ~30 min/day for ~100 days is the working budget; the protocol and first-week sizing are tuned to it. If the real cadence is instead a few long weekend blocks, the day-type rotation needs re-sizing.
+- **Assumption:** ~30 min/day for ~100 days is the working budget; the protocol and starter-sequence sizing are tuned to it. If the real cadence is instead a few long weekend blocks, the day-type rotation needs re-sizing.
 - **Assumption:** recurrence of a miss in the log is a sufficient trigger to promote it to a flashcard; if recurrence proves a poor signal, the promotion rule (in `review-log.md`) is the thing to revisit.
 
 ---
@@ -267,7 +267,7 @@ The five docs under `prep/arena-interview-prep/study/`, the first-week starter, 
 ## Risks
 
 - **Over-build creep.** The biggest risk is the prep folder growing tooling. Mitigation: KTD5/R11 and the README "intentionally deferred" note keep the boundary explicit and visible at the entry point.
-- **Keystone friction.** If `daily-protocol.md` is not genuinely answerable in seconds, the habit fails regardless of catalog quality. Mitigation: the top-of-file "Do this now" block (U3) and the AE1 timing check in validation.
+- **Keystone friction.** If `session-protocol.md` is not genuinely answerable in seconds, the habit fails regardless of catalog quality. Mitigation: the top-of-file "Do this now" block (U3) and the AE1 timing check in validation.
 - **Link rot to evidence/solutions.** Relative links from `study/` reach up several levels (`../../../Python/...`). Mitigation: explicit link-resolution check in the validation checklist; KTD1's sibling placement keeps the depth bounded and consistent.
 - **Catalog/log family-name drift.** Recurrence clustering (R10) depends on the log's pattern-family column matching catalog family names. Mitigation: U2 legend states the matching rule; U1 fixes the canonical family names first.
 
