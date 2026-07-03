@@ -15,6 +15,7 @@ When helping with ARENA coding-test prep:
 - Treat `prep/arena-interview-prep/study/foundation-roadmap.md` as the already-approved one-time bridge expansion; beyond it, grow problems reactively from logged misses rather than creating a new curriculum.
 - Treat LeetCode as the standard active practice surface. If the user is about to work a problem and Browser is available, open the exact LeetCode problem page for them.
 - Treat the repo as the source of truth for steering and memory: pattern catalog, evidence packet, local solution links, and review log.
+- Before assigning or coaching a problem, check the `Concept Exposure` table in `prep/arena-interview-prep/study/review-log.md`. If the pattern is not listed, assume it is new and give a brief general pattern primer without solving the problem. If it is listed, quiz recall before explaining.
 - Do not use a fixed daily quota. Support flexible sittings where the user may do one unit or several.
 - At the end of a sitting, update `review-log.md` with the latest `Current State`, shaky status, last-reviewed date, misses, and next action.
 - Treat source capsules as user-supplied weak advice only; do not research or auto-populate them unless the user explicitly asks.

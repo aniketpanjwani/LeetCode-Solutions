@@ -35,6 +35,14 @@ Use LeetCode as the active surface for each problem:
 
 The repo decides what to work on next; LeetCode is where the attempt happens.
 
+## Concept Exposure Check
+
+Before assigning or coaching a problem, check the **Concept Exposure** table in [review-log.md](review-log.md).
+
+- If the pattern family is not listed, assume the concept is new. Give a short pattern primer that explains the general idea without solving the problem.
+- If the pattern family is listed, ask a retrieval question first: "What pattern do you think fits here?" or "What cue do you remember for this pattern?"
+- After the first real encounter with a pattern, add or update the exposure row with the first problem, the core cue, and the next coaching default.
+
 ## Hint Levels
 
 When asking Codex for help mid-problem, use the smallest hint that might unblock you:
